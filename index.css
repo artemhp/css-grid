@@ -1,0 +1,26 @@
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 325px 325px 100px;
+    gap: 25px;
+}
+
+.grid > img:nth-child(2),
+.grid > img:nth-child(3) {
+    grid-column: auto / span 2;
+}
+
+.grid > img:nth-child(3) {
+    grid-row: auto / span 2;
+}
+
+.grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
